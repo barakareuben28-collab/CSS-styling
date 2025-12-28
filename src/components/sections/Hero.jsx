@@ -9,14 +9,14 @@ const Hero = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
-            <p className="text-sm text-muted mb-2">Hello, I’m</p>
-            <h2 className="text-2xl md:text-3xl text-neutralDark font-semibold mb-1">Ava Laurent</h2>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-4">UI / UX Designer</h1>
-            <p className="text-muted max-w-xl mb-6">I design bold, human-centered interfaces and craft delightful product experiences for ambitious teams.</p>
+            <p className="text-sm text-muted mb-2">NoirCraft</p>
+            <h2 className="text-2xl md:text-3xl text-neutralDark font-semibold mb-1">Dark‑orange design studio</h2>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-4">Crafting bold, human‑centered interfaces</h1>
+            <p className="text-muted max-w-xl mb-6">We design interfaces and product experiences that are striking, usable, and optimized for outcomes.</p>
 
             <div className="flex gap-4 mb-6">
-              <Button variant="primary" className="bg-primary text-white">Hire Me</Button>
-              <Button variant="outline" className="border-neutralDark text-neutralDark">Download CV</Button>
+              <Button variant="primary" className="bg-primary text-white">Start a Project</Button>
+              <Button variant="outline" className="border-neutralDark text-neutralDark">View Portfolio</Button>
             </div>
 
             <div className="flex items-center gap-4 mt-6">
@@ -39,7 +39,7 @@ const Hero = () => {
             <div className="relative w-80 h-80 rounded-full overflow-hidden shadow-2xl">
               <ResponsiveImage
                 src={portrait}
-                alt="Portrait of Mahmood Fazile"
+                alt="Portrait"
                 className="object-cover w-full h-full"
               />
             </div>

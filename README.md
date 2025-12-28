@@ -24,6 +24,10 @@
 
 **Brand voice:** Confident, concise, crafted.
 
+### Contact
+
+**Email:** hello@noircraft.studio
+
 ### Color System
 Colors are defined in `tailwind.config.js` and used consistently across components.
 - **Primary:** `#ff6a00` — Main brand orange used for CTAs and active states (high visibility, warm).
