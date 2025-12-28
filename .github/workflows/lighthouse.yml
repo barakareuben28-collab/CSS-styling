@@ -34,9 +34,13 @@ jobs:
       - name: Create reports dir
         run: mkdir -p reports
 
-      - name: Run Lighthouse (desktop)
+      - name: Run Lighthouse (desktop) - JSON
         run: |
-          npx lighthouse http://127.0.0.1:8080 --output html --output-path ./reports/lighthouse.html --output json --output-path ./reports/lighthouse.json --emulated-form-factor=desktop --chrome-flags="--no-sandbox"
+          npx lighthouse http://127.0.0.1:8080 --output json --output-path ./reports/lighthouse.json --emulated-form-factor=desktop --chrome-flags="--no-sandbox"
+
+      - name: Run Lighthouse (desktop) - HTML
+        run: |
+          npx lighthouse http://127.0.0.1:8080 --output html --output-path ./reports/lighthouse.html --emulated-form-factor=desktop --chrome-flags="--no-sandbox"
 
       - name: Upload Lighthouse report
         uses: actions/upload-artifact@v4
