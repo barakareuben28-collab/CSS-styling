@@ -57,11 +57,25 @@ Please see the `assets/images` folder for each file and the original Unsplash pa
 4. Build for production: `npm run build`
 
 ## Deployment (Netlify)
-This project includes `netlify.toml` and is ready to deploy to Netlify. Setup steps:
-1. Connect the repository on Netlify
-2. Build command: `npm run build`
-3. Publish directory: `dist`
-4. Add environment variables in Netlify (if needed)
+This project includes `netlify.toml` and a GitHub Actions workflow to deploy automatically.
+
+Quick deploy options:
+
+A) Automatic deploy with GitHub Actions (recommended)
+1. Create a Netlify site and get the **Site ID** (Netlify → Site settings → Site details).
+2. Create a Netlify personal access token (Netlify → User settings → Applications → Personal access tokens).
+3. In your GitHub repository settings, add these repository **secrets**:
+   - `NETLIFY_AUTH_TOKEN` — your Netlify personal access token
+   - `NETLIFY_SITE_ID` — the site id value
+4. Push to `main` (or run the workflow manually via the Actions tab) and the site will be built and deployed.
+
+B) Manual deploy (local)
+1. Install Netlify CLI: `npm install -g netlify-cli` or use `npx netlify-cli`.
+2. Run `NETLIFY_AUTH_TOKEN=your_token npx netlify deploy --prod --dir=dist --site=YOUR_SITE_ID` from the project root.
+
+Notes:
+- The included workflow file is `.github/workflows/netlify-deploy.yml` and deploys the `dist/` directory on `push` to `main`.
+- If you'd like, I can trigger a deploy for you if you provide a Netlify token (or add the GitHub secrets and I can run a test deployment by pushing to `main`).
 
 ## Performance & Accessibility
 - Lazy loading for images via `ResponsiveImage`
