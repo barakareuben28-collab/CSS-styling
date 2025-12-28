@@ -1,21 +1,19 @@
 # NoirCraft — Portfolio
 
 ## Live Demo
-**Not deployed yet.** To deploy to Netlify, connect this repository in the Netlify dashboard and set up a site with the following build settings:
+**Not deployed yet.** You can deploy to Netlify (instructions above) or use **GitHub Pages** — I added an Action that builds and publishes `dist/` to the `gh-pages` branch automatically when `main` receives changes.
 
-- **Build command:** `npm run build`
-- **Publish directory:** `dist`
+- **GitHub Pages (automatic):** After merging your PR into `main`, the workflow `/.github/workflows/github-pages.yml` will run on push and publish `dist/` to the `gh-pages` branch.
 
-I've added a Netlify configuration (`netlify.toml`) and a GitHub Action (`.github/workflows/netlify-deploy.yml`) that will build and deploy `dist/` on pushes to `main`. To enable automatic deploys you must add the following repository secrets in GitHub:
+  - Workflow badge (status):
 
-- `NETLIFY_AUTH_TOKEN` — a Personal Access Token from Netlify with deploy permissions
-- `NETLIFY_SITE_ID` — the Site ID for your Netlify site
+    [![Deploy to GitHub Pages](https://github.com/barakareuben28-collab/CSS-styling/actions/workflows/github-pages.yml/badge.svg)](https://github.com/barakareuben28-collab/CSS-styling/actions/workflows/github-pages.yml)
 
-Once set, the GitHub Action will deploy the site automatically. You can then add this badge to the README (replace `<SITE_ID>` with your site id):
+  - Expected site URL after deploy: `https://barakareuben28-collab.github.io/CSS-styling/` (GitHub Pages may take a few minutes to become available after the first deploy).
 
-`[![Deploy to Netlify](https://api.netlify.com/api/v1/badges/<SITE_ID>/deploy-status)](https://app.netlify.com/sites/<SITE_NAME>/deploys)`
+- **Netlify:** (see previous section) connect via the Netlify dashboard and add secrets to enable CI-driven Netlify deploys.
 
-Replace the `<SITE_NAME>` placeholder above with your Netlify site slug to link to the deploys page.
+Once you merge the PR, check Actions → **Deploy to GitHub Pages** for the build logs. If you want, I can merge the PR and monitor the run for you.
 
 ---
 
