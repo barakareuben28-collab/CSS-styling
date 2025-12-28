@@ -92,8 +92,8 @@ If you reuse any assets, please follow the original Unsplash license and attribu
 
 ## Installation & Setup
 1. Clone the repo:
-   - `git clone https://github.com/<owner>/CSS-styling.git`
-   - `cd CSS-styling`
+   - `git clone https://github.com/<owner>/NoirCraft.git`
+   - `cd NoirCraft`
 2. Install dependencies: `npm install`
 3. Local dev server: `npm run dev` (visit `http://localhost:5173`)
 4. Build for production: `npm run build`

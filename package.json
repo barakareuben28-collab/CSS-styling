@@ -1,5 +1,6 @@
 {
-  "name": "css-styling",
+  "name": "noircraft",
+  "description": "NoirCraft portfolio — dark‑orange design studio",
   "private": true,
   "version": "0.0.0",
   "type": "module",
