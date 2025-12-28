@@ -1,7 +1,21 @@
 # NoirCraft — Portfolio
 
 ## Live Demo
-[Deployed URL placeholder — add deployed site URL here]
+**Not deployed yet.** To deploy to Netlify, connect this repository in the Netlify dashboard and set up a site with the following build settings:
+
+- **Build command:** `npm run build`
+- **Publish directory:** `dist`
+
+I've added a Netlify configuration (`netlify.toml`) and a GitHub Action (`.github/workflows/netlify-deploy.yml`) that will build and deploy `dist/` on pushes to `main`. To enable automatic deploys you must add the following repository secrets in GitHub:
+
+- `NETLIFY_AUTH_TOKEN` — a Personal Access Token from Netlify with deploy permissions
+- `NETLIFY_SITE_ID` — the Site ID for your Netlify site
+
+Once set, the GitHub Action will deploy the site automatically. You can then add this badge to the README (replace `<SITE_ID>` with your site id):
+
+`[![Deploy to Netlify](https://api.netlify.com/api/v1/badges/<SITE_ID>/deploy-status)](https://app.netlify.com/sites/<SITE_NAME>/deploys)`
+
+Replace the `<SITE_NAME>` placeholder above with your Netlify site slug to link to the deploys page.
 
 ---
 
