@@ -1,4 +1,5 @@
 import ResponsiveImage from '../common/ResponsiveImage';
+import portrait from '../../assets/images/portrait.jpg';
 
 const About = () => {
   const skills = [
@@ -16,7 +17,7 @@ const About = () => {
           <div className="flex justify-center lg:justify-start">
             <div className="w-80 rounded-lg overflow-hidden shadow-2xl">
               <ResponsiveImage
-                src={require('../../assets/images/portrait.jpg')}
+                src={portrait}
                 alt="Portrait"
                 className="object-cover w-full h-full"
               />

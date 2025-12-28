@@ -5,7 +5,20 @@ const Portfolio = () => {
     'project-1.jpg','project-2.jpg','project-3.jpg','project-4.jpg','project-5.jpg','project-6.jpg','project-7.jpg','project-8.jpg','project-9.jpg'
   ];
 
-  const items = images.map((img, i) => ({ title: 'Name Project', category: 'Categories', image: require(`../../assets/images/${img}`) }));
+  const modules = import.meta.glob('/src/assets/images/*.jpg', { eager: true });
+  if (!modules || typeof modules !== 'object') {
+    console.error('import.meta.glob did not return an object — bundler may not have transformed the glob.');
+    throw new Error('import.meta.glob not transformed: check build config or replace with static imports');
+  }
+  const items = images.map((img, i) => {
+    const key = `/src/assets/images/${img}`;
+    const mod = modules[key];
+    if (!mod || !mod.default) {
+      console.error('Missing module for', key, 'modules keys:', Object.keys(modules));
+      throw new Error('Missing bundled image: ' + key);
+    }
+    return { title: 'Name Project', category: 'Categories', image: mod.default };
+  });
 
   return (
     <section id="portfolio" className="py-16">

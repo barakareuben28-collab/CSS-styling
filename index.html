@@ -13,6 +13,39 @@
   <body>
     <a href="#main" class="skip-link">Skip to main content</a>
     <div id="root"></div>
+    <script>
+      (function(){
+        function show(msg){
+          var el = document.getElementById('runtime-error-overlay');
+          if(!el){
+            el = document.createElement('div');
+            el.id = 'runtime-error-overlay';
+            el.style.position = 'fixed';
+            el.style.top = '0';
+            el.style.left = '0';
+            el.style.right = '0';
+            el.style.background = 'rgba(200,0,0,0.95)';
+            el.style.color = '#fff';
+            el.style.padding = '12px';
+            el.style.fontFamily = 'system-ui, monospace';
+            el.style.zIndex = '2147483647';
+            el.style.fontSize = '14px';
+            document.body.appendChild(el);
+          }
+          el.textContent = msg;
+        }
+        window.addEventListener('error', function(e){
+          try{ show('Error: ' + (e && e.message ? e.message : String(e))); }catch(e){}
+          console.error(e && e.error ? e.error : e);
+        });
+        window.addEventListener('unhandledrejection', function(e){
+          try{ show('Unhandled rejection: ' + String(e.reason)); }catch(e){}
+          console.error(e && e.reason ? e.reason : e);
+        });
+        // Signal that the inline overlay has loaded
+        console.log('INLINE_OVERLAY_LOADED');
+      })();
+    </script>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

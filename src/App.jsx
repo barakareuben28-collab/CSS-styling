@@ -7,6 +7,7 @@ import Portfolio from './components/sections/Portfolio';
 import Contact from './components/sections/Contact';
 
 function App() {
+  console.log('APP_RENDER');
   return (
     <div className="min-h-screen bg-surface">
       <Header />
