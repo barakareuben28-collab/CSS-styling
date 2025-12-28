@@ -1,78 +1,167 @@
-# EcoTech Solutions
+# NoirCraft — Portfolio
 
 ## Live Demo
-[Deployed URL will be added after deployment]
+[Deployed URL placeholder — add deployed site URL here]
+
+---
 
 ## Project Overview
-EcoTech Solutions is a landing page for a sustainable technology company that offers eco-friendly innovations to reduce carbon footprint and promote environmental responsibility. The website showcases our commitment to green technology through modern design and compelling content.
+**NoirCraft** is a polished design portfolio and studio site that showcases UI/UX work with a dark, bold aesthetic and energetic orange accents. The site is built with React and Tailwind CSS and follows a strict grid and spacing system derived from the provided reference design.
+
+### Purpose
+- Showcase curated work and case studies
+- Communicate brand & process
+- Provide a simple contact flow for prospective clients
+
+---
 
 ## Brand Identity
+**Brand name:** NoirCraft
+
+**Tagline:** Bold UI, thoughtful UX
+
+**Value proposition:** We design polished interfaces and strategic experiences that help product teams ship with confidence.
+
+**Brand voice:** Confident, concise, crafted.
+
 ### Color System
-- Primary: #16a34a (Green - represents sustainability and growth)
-- Secondary: #2563eb (Blue - symbolizes trust and technology)
-- Accent: #ea580c (Orange - conveys energy and innovation)
-- Neutral Dark: #111827 (Dark gray - for text and strong contrast)
-- Neutral Light: #f3f4f6 (Light gray - for backgrounds and subtle elements)
+Colors are defined in `tailwind.config.js` and used consistently across components.
+- **Primary:** `#ff6a00` — Main brand orange used for CTAs and active states (high visibility, warm).
+- **Accent:** `#ff8a3d` — Secondary orange used for highlights and subtle emphasis.
+- **Secondary / Background:** `#0b1220` — Deep neutral background to preserve contrast and focus.
+- **Surface:** `#0f1724` — Cards and surface panels.
+- **Neutral dark (text on dark):** `#e6e6e9` — Text and lighter UI elements.
+- **Muted:** `#9aa0a6` — Secondary text and subdued UI.
+
+**Color rationale:** The palette emphasizes high contrast and a strong focal color (orange) to communicate craft and confidence while deep neutrals maintain legibility and visual weight.
 
 ### Typography
-- Headings: Inter font family (clean, modern, and highly readable)
-- Body: Inter font family (consistent with headings for brand cohesion)
-- Font weights: 300 (light), 400 (regular), 500 (medium), 600 (semibold), 700 (bold)
+- **Primary font:** Inter (with system fallbacks) — chosen for its neutral, readable shapes and variable weights that work well across headings and body text.
+- **Weights used:** 400 (regular), 600 (semibold), 700 (bold)
+- **Scale:** Headings and body sizes are defined in a consistent scale (see `tailwind.config.js` font sizes) to ensure rhythm across breakpoints.
+
+---
 
 ## Design Decisions
 ### Layout Adherence
-The layout maintains consistent spacing using Tailwind's spacing utilities. Components are structured with a 16px base grid, ensuring visual harmony across all breakpoints. The hero section uses a 2-column grid on large screens, stacking vertically on smaller devices.
+- Spacing and layout were measured using a consistent 4px/8px spacing system and aligned to a 12-column grid for desktop to maintain consistent gutters and alignment.
+- Tailwind utilities are used to ensure spacing parity and easy adjustments.
+- Fonts and scaling were checked across SM / MD / LG breakpoints for visual parity.
 
 ### Creative Departures
-For the MD breakpoint (641px - 1023px), the layout adapts by reducing padding and adjusting grid columns to 2 for features, ensuring optimal use of tablet screen real estate while maintaining readability. The SM breakpoint stacks all elements vertically with increased padding for touch-friendly interactions.
+- Content emphasis favors portfolio thumbnails and concise case descriptors; verbose case studies are intentionally omitted for a cleaner showcase.
+- The color palette was tuned to meet the source screenshot’s vibe, while increasing contrast for accessibility.
+
+---
 
 ## Component Architecture
-The application follows a modular component structure with reusable elements:
-- Common components (Button, Card, Section, ResponsiveImage) handle shared functionality
-- Layout components (Header, Footer, Navigation) provide consistent structure
-- Section components (Hero, Features, About, Contact) contain page-specific content
+Structure (high-level):
+- `src/components/layout` — `Header`, `Navigation`, `Footer`
+- `src/components/common` — reusable primitives: `Button`, `Card`, `ResponsiveImage`, `Section`
+- `src/components/sections` — page sections: `Hero`, `Features`, `About`, `Portfolio`, `Contact`
 
-This architecture promotes maintainability and scalability, allowing easy addition of new sections or modification of existing ones.
+Reusability strategy:
+- Small focused components with clear props and minimal side effects
+- `ResponsiveImage` centralizes responsive `img` logic, `srcset` generation and lazy loading
+- `Section` component standardizes spacing and visual rhythm
+
+---
 
 ## Performance Optimizations
-- Lazy loading implemented for all images using the ResponsiveImage component
-- React.memo used on Card and Button components to prevent unnecessary re-renders
-- Tailwind CSS provides optimized, utility-first styling with minimal CSS output
-- Semantic HTML structure for better accessibility and SEO
+- Production builds with Vite (minified, code-split ESM bundles)
+- Tailwind CSS tree-shaking (content paths) to keep CSS small
+- Responsive images with lazy loading (via `loading="lazy"`) and `srcset` where appropriate
+- Preconnect to Google Fonts for faster font fetch
+- Small bundle size kept by preferring static imports and avoiding heavy runtime requires
+
+---
 
 ## Image Credits
-- Hero image: Photo by [Author] on Unsplash (https://unsplash.com/photos/...)
-- Features images: Various photos from Unsplash
-- About image: Photo by [Author] on Unsplash
+All images are included in `src/assets/images`. Primary credits:
+- `hero-1920.jpg` — Unsplash — https://unsplash.com/photos/1494790108377
+- `portrait.jpg` — Unsplash — https://unsplash.com/photos/1544005313-94ddf0286df2
+- `project-1.jpg` ... `project-9.jpg` — Unsplash collection used for portfolio thumbnails
+
+If you reuse any assets, please follow the original Unsplash license and attribute photographers where required.
+
+---
 
 ## Installation & Setup
-1. Clone the repository
+1. Clone the repo:
+   - `git clone https://github.com/<owner>/CSS-styling.git`
+   - `cd CSS-styling`
 2. Install dependencies: `npm install`
-3. Start development server: `npm run dev`
+3. Local dev server: `npm run dev` (visit `http://localhost:5173`)
 4. Build for production: `npm run build`
+5. Preview production build (optional): `npm run preview` or serve the `dist/` folder with a static server
 
-## Deployment
-This project is configured for deployment on Vercel, Netlify, or similar platforms. Simply connect your repository and the build command will be `npm run build` with the output directory as `dist`.
+Notes:
+- Remove debug `console.log` entries before final submission (see TODOs in source)
+
+---
 
 ## Technologies Used
-- React v18.3.1
-- Vite v7.3.0
-- Tailwind CSS v3.4.1
-- Additional packages: prop-types for component validation
+- React ^19.2.0
+- Vite ^7.2.x
+- Tailwind CSS ^4.1.x
+- PostCSS / Autoprefixer
+- ESLint for linting
+- jsdom for headless debugging
+- Puppeteer (dev) for headless capture, when environment allows
+
+---
 
 ## Challenges & Solutions
-1. **Responsive Design Consistency**: Ensured consistent spacing and layout across breakpoints by using Tailwind's responsive utilities and custom grid systems.
-2. **Image Optimization**: Implemented lazy loading and proper alt text to improve performance and accessibility.
-3. **Color Contrast**: Verified all color combinations meet WCAG AA standards using online contrast checkers.
+1. **Runtime `require()` errors in production** — Some legacy `require()` calls caused `ReferenceError` in ESM bundles. Solution: replaced with static `import` or `import.meta.glob` patterns and rebuilt.
+2. **`import.meta.globEager` not available at runtime** — Bundler did not transform a dynamic glob in one case leading to `TypeError`. Solution: replaced with `import.meta.glob('/path/*', { eager: true })` and added a runtime guard to surface clear diagnostics.
+3. **Headless Chromium not launching in environment** — Missing system libraries and no apt permissions prevented Puppeteer headless runs. Solution: added `scripts/run-jsdom.cjs` to execute built bundles in `jsdom` and created an inline runtime overlay to surface runtime errors visually.
+
+---
 
 ## Future Improvements
-1. Add dark mode toggle functionality
-2. Implement contact form with backend integration
-3. Add animation library for enhanced user experience
-4. Integrate with CMS for dynamic content management
+- Add unit/integration tests with Vitest + React Testing Library and wire them into CI
+- Add automated Lighthouse checks in CI and tune to meet targets
+- Add a staging+production Netlify deploy flow with environment previews
+- Improve portfolio data model and add case study pages with detailed layouts and SEO metadata
+- Audit and fix accessibility issues discovered by manual testing and tools
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## Submission & Repository Requirements
+Please ensure the following before final submission:
+- Public GitHub repo with a clear commit history and meaningful commit messages
+- `.gitignore` excludes `node_modules` and `dist`/build artifacts
+- ESLint configured and no console logs present in production code
+- Screenshots included in `/screenshots` (see below)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Deliverables checklist:
+- Live deployed URL (add above)
+- GitHub repository link
+- `README.md` (this file) with the requested sections
+- `/screenshots` folder with:
+  - `lg-breakpoint.png` (showing LG layout)
+  - `md-breakpoint.png` (showing MD layout)
+  - `sm-breakpoint.png` (showing SM layout)
+  - `lighthouse-report.png`
+
+
+---
+
+## Git Commit History Requirements
+- Make frequent, incremental commits reflecting real development progress (recommended 3–4 commits/week)
+- Keep changes scoped per commit (e.g., "Add Header component", "Implement responsive navigation")
+- Avoid single massive commits containing unrelated changes
+- Document decisions in commit messages to show your development process
+
+**Academic Integrity Warning**
+- Irregular commit patterns (e.g., entire project in 1–3 commits near deadline) or evidence of plagiarism may result in review and penalties (reduced grade, requirement to explain development in person, or more severe consequences). Maintain honest, verifiable work history.
+
+---
+
+## Final notes & TODOs
+- TODO: Remove development `console.log` debug messages (search for `MAIN_MODULE_EXECUTED`, `INLINE_OVERLAY_LOADED`, `RENDER_DIAG`, etc.) before final submission.
+- TODO: Add Vitest test suite and GitHub Actions to run lint/build/test and Lighthouse.
+
+---
+
+If you'd like, I can: run a local Lighthouse audit and attach the report, add a test suite + CI workflow, or open a PR with these changes and a summary for review — tell me which you'd like me to do next.

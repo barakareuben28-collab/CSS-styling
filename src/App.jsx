@@ -3,16 +3,19 @@ import Footer from './components/layout/Footer';
 import Hero from './components/sections/Hero';
 import Features from './components/sections/Features';
 import About from './components/sections/About';
+import Portfolio from './components/sections/Portfolio';
 import Contact from './components/sections/Contact';
 
 function App() {
+  console.log('APP_RENDER');
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-surface">
       <Header />
-      <main>
+      <main id="main">
         <Hero />
         <Features />
         <About />
+        <Portfolio />
         <Contact />
       </main>
       <Footer />

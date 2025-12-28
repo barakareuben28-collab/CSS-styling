@@ -1,30 +1,44 @@
 import ResponsiveImage from '../common/ResponsiveImage';
+import portrait from '../../assets/images/portrait.jpg';
 
 const About = () => {
+  const skills = [
+    { name: 'Figma', percent: 100 },
+    { name: 'Adobe XD', percent: 100 },
+    { name: 'Adobe Photoshop', percent: 85 },
+    { name: 'Adobe Illustrator', percent: 60 },
+    { name: 'Adobe Premiere', percent: 70 },
+  ];
+
   return (
-    <section id="about" className="bg-white py-16">
+    <section id="about" className="py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div>
-            <h2 className="text-3xl md:text-4xl font-bold text-neutralDark mb-6">About EcoTech Solutions</h2>
-            <p className="text-lg text-gray-600 mb-6">
-              Founded in 2020, EcoTech Solutions is dedicated to creating technology that not only advances business goals but also protects our planet. We believe that innovation and sustainability can go hand in hand.
-            </p>
-            <p className="text-lg text-gray-600 mb-6">
-              Our team of experts combines deep technical knowledge with a passion for environmental stewardship. We've helped over 500 companies reduce their carbon footprint by an average of 30% through our cutting-edge solutions.
-            </p>
-            <ul className="list-disc list-inside text-gray-600 space-y-2">
-              <li>Certified B-Corp company</li>
-              <li>Carbon neutral operations since 2022</li>
-              <li>Winner of Green Tech Innovation Award 2024</li>
-            </ul>
+          <div className="flex justify-center lg:justify-start">
+            <div className="w-80 rounded-lg overflow-hidden shadow-2xl">
+              <ResponsiveImage
+                src={portrait}
+                alt="Portrait"
+                className="object-cover w-full h-full"
+              />
+            </div>
           </div>
-          <div className="flex justify-center">
-            <ResponsiveImage
-              src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYW55fHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
-              alt="EcoTech Solutions team"
-              className="rounded-lg shadow-lg max-w-full h-auto"
-            />
+          <div>
+            <h2 className="text-3xl md:text-4xl font-bold text-neutralDark mb-2">About</h2>
+            <p className="text-sm text-muted mb-6">Designing for clarity, delight and measurable outcomes.</p>
+            <p className="text-muted mb-6">Ava is a product-focused designer who blends strategic thinking with hands-on craft. She helps startups and product teams discover clarity, create polished interfaces, and ship delightful experiences that move business metrics. Her process centers on rapid prototyping, UX research, and scalable design systems.</p>
+            <div className="mb-6">
+              <button className="px-4 py-2 rounded-md bg-primary text-white">Download CV</button>
+            </div>
+
+            <div className="grid grid-cols-3 sm:grid-cols-5 gap-4">
+              {skills.map((s, i) => (
+                <div key={i} className="flex flex-col items-center">
+                  <div className="skill-circle mb-2 text-primary">{s.percent}%</div>
+                  <div className="text-sm text-muted mt-1 text-center">{s.name}</div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
@@ -32,4 +46,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default About; 
