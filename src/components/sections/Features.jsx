@@ -1,47 +1,30 @@
 import Card from '../common/Card';
-import ResponsiveImage from '../common/ResponsiveImage';
 
 const Features = () => {
-  const features = [
-    {
-      title: 'Eco-Friendly Design',
-      description: 'Our products are designed with sustainability at the core, using recycled materials and energy-efficient processes.',
-      image: 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYW55fHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80',
-      alt: 'Eco-friendly design'
-    },
-    {
-      title: 'Advanced Analytics',
-      description: 'Leverage cutting-edge AI and machine learning to optimize energy usage and reduce environmental impact.',
-      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYW55fHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80',
-      alt: 'Advanced analytics dashboard'
-    },
-    {
-      title: 'Scalable Solutions',
-      description: 'From small businesses to large enterprises, our solutions scale to meet your sustainability goals.',
-      image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYW55fHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80',
-      alt: 'Scalable technology solutions'
-    }
-  ];
+  const services = new Array(6).fill({
+    title: 'App Design',
+    description: 'Lorem ipsum dolor sit amet. Imperdiet Lorem ipsum dolor sit amet consectetur.'
+  });
 
   return (
-    <section id="features" className="bg-neutralLight py-16">
+    <section id="services" className="py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-neutralDark mb-4">Our Key Features</h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Discover how EcoTech Solutions can help your organization achieve sustainability targets with innovative technology.
-          </p>
+          <h2 className="text-3xl md:text-4xl font-bold text-neutralDark mb-4">Services</h2>
+          <p className="text-muted max-w-2xl mx-auto">Lorem ipsum dolor sit amet consectetur. Imperdiet convallis blandit felis ligula aliquam.</p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {features.map((feature, index) => (
-            <Card key={index} className="text-center">
-              <ResponsiveImage
-                src={feature.image}
-                alt={feature.alt}
-                className="w-full h-48 object-cover rounded-t-lg mb-4"
-              />
-              <h3 className="text-xl font-semibold text-neutralDark mb-2">{feature.title}</h3>
-              <p className="text-gray-600">{feature.description}</p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {services.map((s, i) => (
+            <Card key={i} className="card-surface p-6 text-center">
+              <div className="flex justify-center mb-4">
+                <div className="w-12 h-12 rounded-full bg-black/10 grid place-items-center text-primary">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 20c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8z" />
+                  </svg>
+                </div>
+              </div>
+              <h3 className="text-lg font-semibold text-neutralDark mb-2">{s.title}</h3>
+              <p className="text-muted">{s.description}</p>
             </Card>
           ))}
         </div>
@@ -50,4 +33,4 @@ const Features = () => {
   );
 };
 
-export default Features;
+export default Features; 

@@ -1,33 +1,37 @@
 const Footer = () => {
   return (
-    <footer className="bg-neutralDark text-white py-8">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div>
-            <h3 className="text-lg font-semibold mb-4">EcoTech Solutions</h3>
-            <p className="text-gray-300">Building sustainable technology for a greener future.</p>
-          </div>
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
-            <ul className="space-y-2">
-              <li><a href="#home" className="text-gray-300 hover:text-white">Home</a></li>
-              <li><a href="#features" className="text-gray-300 hover:text-white">Features</a></li>
-              <li><a href="#about" className="text-gray-300 hover:text-white">About</a></li>
-              <li><a href="#contact" className="text-gray-300 hover:text-white">Contact</a></li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Contact Us</h4>
-            <p className="text-gray-300">Email: info@ecotechsolutions.com</p>
-            <p className="text-gray-300">Phone: (555) 123-4567</p>
-          </div>
+    <footer className="bg-surface text-muted py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="mb-6">
+          <span className="text-primary font-bold text-lg">LOGO</span>
         </div>
-        <div className="mt-8 pt-8 border-t border-gray-700 text-center">
-          <p className="text-gray-300">&copy; 2025 EcoTech Solutions. All rights reserved.</p>
+        <nav className="mb-6">
+          <ul className="flex items-center justify-center gap-6 text-sm">
+            <li><a href="#home" className="hover:text-primary">Home</a></li>
+            <li><a href="#services" className="hover:text-primary">Services</a></li>
+            <li><a href="#about" className="hover:text-primary">About me</a></li>
+            <li><a href="#portfolio" className="hover:text-primary">Portfolio</a></li>
+            <li><a href="#contact" className="hover:text-primary">Contact me</a></li>
+          </ul>
+        </nav>
+
+        <div className="flex items-center justify-center gap-4 mb-6">
+          <div className="w-8 h-8 rounded-full bg-black/10 grid place-items-center">IG</div>
+          <div className="w-8 h-8 rounded-full bg-black/10 grid place-items-center">TW</div>
+          <div className="w-8 h-8 rounded-full bg-black/10 grid place-items-center">BE</div>
+        </div>
+
+        <div className="text-sm mb-6">
+          <div>ava@noircraft.studio</div>
+          <div>+1 (555) 010-2020</div>
+        </div>
+
+        <div className="text-xs text-muted/70">
+          Designed by NoirCraft Studio
         </div>
       </div>
     </footer>
   );
 };
 
-export default Footer;
+export default Footer; 
