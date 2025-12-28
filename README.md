@@ -1,7 +1,19 @@
 # NoirCraft — Portfolio
 
 ## Live Demo
-[Deployed URL placeholder — add deployed site URL here]
+**Not deployed yet.** You can deploy to Netlify (instructions above) or use **GitHub Pages** — I added an Action that builds and publishes `dist/` to the `gh-pages` branch automatically when `main` receives changes.
+
+- **GitHub Pages (automatic):** After merging your PR into `main`, the workflow `/.github/workflows/github-pages.yml` will run on push and publish `dist/` to the `gh-pages` branch.
+
+  - Workflow badge (status):
+
+    [![Deploy to GitHub Pages](https://github.com/barakareuben28-collab/CSS-styling/actions/workflows/github-pages.yml/badge.svg)](https://github.com/barakareuben28-collab/CSS-styling/actions/workflows/github-pages.yml)
+
+  - Expected site URL after deploy: `https://barakareuben28-collab.github.io/CSS-styling/` (GitHub Pages may take a few minutes to become available after the first deploy).
+
+- **Netlify:** (see previous section) connect via the Netlify dashboard and add secrets to enable CI-driven Netlify deploys.
+
+Once you merge the PR, check Actions → **Deploy to GitHub Pages** for the build logs. If you want, I can merge the PR and monitor the run for you.
 
 ---
 
@@ -23,6 +35,10 @@
 **Value proposition:** We design polished interfaces and strategic experiences that help product teams ship with confidence.
 
 **Brand voice:** Confident, concise, crafted.
+
+### Contact
+
+**Email:** hello@noircraft.studio
 
 ### Color System
 Colors are defined in `tailwind.config.js` and used consistently across components.
@@ -88,8 +104,8 @@ If you reuse any assets, please follow the original Unsplash license and attribu
 
 ## Installation & Setup
 1. Clone the repo:
-   - `git clone https://github.com/<owner>/CSS-styling.git`
-   - `cd CSS-styling`
+   - `git clone https://github.com/<owner>/NoirCraft.git`
+   - `cd NoirCraft`
 2. Install dependencies: `npm install`
 3. Local dev server: `npm run dev` (visit `http://localhost:5173`)
 4. Build for production: `npm run build`

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Button from '../common/Button';
+import logo from '../../assets/images/logo-noircraft.svg';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,22 +12,22 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           <div className="flex items-center">
-            <div className="flex-shrink-0">
-              <span className="text-primary font-bold text-lg">LOGO</span>
+            <div className="flex-shrink-0 flex items-center gap-3">
+              <img src={logo} alt="NoirCraft logo" className="h-8 w-auto" />
+              <span className="text-neutralDark font-bold text-lg">NoirCraft</span>
             </div>
             <div className="hidden md:block ml-8">
               <div className="flex items-baseline space-x-6">
-                <a href="#home" className="text-muted hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Home</a>
-                <a href="#services" className="text-muted hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Services</a>
-                <a href="#about" className="text-muted hover:text-primary px-3 py-2 rounded-md text-sm font-medium">About me</a>
+                <a href="#home" className="text-muted hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Work</a>
+                <a href="#about" className="text-muted hover:text-primary px-3 py-2 rounded-md text-sm font-medium">About</a>
                 <a href="#portfolio" className="text-muted hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Portfolio</a>
-                <a href="#contact" className="text-muted hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Contact me</a>
+                <a href="#contact" className="text-muted hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Contact</a>
               </div>
             </div>
           </div>
 
           <div className="hidden md:flex items-center space-x-4">
-            <a href="#hire" className="px-4 py-2 rounded-md bg-primary text-white">Hire Me</a>
+            <a href="#hire" className="px-4 py-2 rounded-md bg-primary text-white">Start a Project</a>
           </div>
 
           <div className="md:hidden">
@@ -52,12 +53,11 @@ const Navigation = () => {
       {isOpen && (
         <div className="md:hidden" id="mobile-menu">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-surface">
-            <a href="#home" className="text-neutralDark hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Home</a>
-            <a href="#services" className="text-neutralDark hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Services</a>
-            <a href="#about" className="text-neutralDark hover:text-primary block px-3 py-2 rounded-md text-base font-medium">About me</a>
+            <a href="#home" className="text-neutralDark hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Work</a>
+            <a href="#about" className="text-neutralDark hover:text-primary block px-3 py-2 rounded-md text-base font-medium">About</a>
             <a href="#portfolio" className="text-neutralDark hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Portfolio</a>
-            <a href="#contact" className="text-neutralDark hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Contact me</a>
-            <a href="#hire" className="block text-primary bg-opacity-10 px-3 py-2 rounded-md">Hire Me</a>
+            <a href="#contact" className="text-neutralDark hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+            <a href="#hire" className="block text-primary bg-opacity-10 px-3 py-2 rounded-md">Start a Project</a>
           </div>
         </div>
       )}

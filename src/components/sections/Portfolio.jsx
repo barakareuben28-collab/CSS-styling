@@ -10,7 +10,7 @@ const Portfolio = () => {
     console.error('import.meta.glob did not return an object — bundler may not have transformed the glob.');
     throw new Error('import.meta.glob not transformed: check build config or replace with static imports');
   }
-  const items = images.map((img, i) => {
+  const items = images.map((img) => {
     const key = `/src/assets/images/${img}`;
     const mod = modules[key];
     if (!mod || !mod.default) {

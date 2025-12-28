@@ -6,8 +6,8 @@ const Contact = () => {
     <section id="contact" className="py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-neutralDark mb-4">Contact me</h2>
-          <p className="text-muted max-w-2xl mx-auto">Cultivating Connections: Reach Out And Connect With Me</p>
+          <h2 className="text-3xl md:text-4xl font-bold text-neutralDark mb-4">Contact</h2>
+          <p className="text-muted max-w-2xl mx-auto">Cultivating connections — let’s build something great.</p>
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <Card>
@@ -15,7 +15,7 @@ const Contact = () => {
             <div className="space-y-4">
               <div>
                 <h4 className="font-medium text-neutralDark">Email</h4>
-                <p className="text-muted">ava@noircraft.studio</p>
+                <p className="text-muted">hello@noircraft.studio</p>
               </div>
               <div>
                 <h4 className="font-medium text-neutralDark">Phone</h4>

@@ -26,9 +26,9 @@ const About = () => {
           <div>
             <h2 className="text-3xl md:text-4xl font-bold text-neutralDark mb-2">About</h2>
             <p className="text-sm text-muted mb-6">Designing for clarity, delight and measurable outcomes.</p>
-            <p className="text-muted mb-6">Ava is a product-focused designer who blends strategic thinking with hands-on craft. She helps startups and product teams discover clarity, create polished interfaces, and ship delightful experiences that move business metrics. Her process centers on rapid prototyping, UX research, and scalable design systems.</p>
+            <p className="text-muted mb-6">NoirCraft is a studio specializing in bold interfaces and refined product experiences. We help startups and product teams discover clarity, create polished interfaces, and ship delightful experiences that move business metrics. Our process centers on rapid prototyping, UX research, and scalable design systems.</p>
             <div className="mb-6">
-              <button className="px-4 py-2 rounded-md bg-primary text-white">Download CV</button>
+              <button className="px-4 py-2 rounded-md bg-primary text-white">View Portfolio</button>
             </div>
 
             <div className="grid grid-cols-3 sm:grid-cols-5 gap-4">
