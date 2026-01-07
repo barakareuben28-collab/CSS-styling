@@ -1,22 +1,16 @@
 # NoirCraft — Portfolio
 
-## Live Demo
-## Live Demo
-🚀 **[View Live Portfolio](https://css-styling-i39l.vercel.app)**
+## 🚀 Live Demo
+The project is live and automatically deployed via Vercel.
+
+**[View Live Portfolio](https://css-styling-i39l.vercel.app)**
+---
 
 ### Deployment Status
 ![Vercel Deployment](deploy-badge.vercel.app)
 
 
-    [![Deploy to GitHub Pages](https://github.com/barakareuben28-collab/CSS-styling/actions/workflows/github-pages.yml/badge.svg)](https://github.com/barakareuben28-collab/CSS-styling/actions/workflows/github-pages.yml)
-
-  - Expected site URL after deploy: `https://barakareuben28-collab.github.io/CSS-styling/` (GitHub Pages may take a few minutes to become available after the first deploy).
-
-- **Netlify:** (see previous section) connect via the Netlify dashboard and add secrets to enable CI-driven Netlify deploys.
-
-Once you merge the PR, check Actions → **Deploy to GitHub Pages** for the build logs. If you want, I can merge the PR and monitor the run for you.
-
----
+    [!
 
 ## Project Overview
 **NoirCraft** is a polished design portfolio and studio site that showcases UI/UX work with a dark, bold aesthetic and energetic orange accents. The site is built with React and Tailwind CSS and follows a strict grid and spacing system derived from the provided reference design.
