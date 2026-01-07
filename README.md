@@ -1,11 +1,12 @@
 # NoirCraft — Portfolio
 
 ## Live Demo
-**https://noircraft-portfolio.css-styling-i39l.app).**
+## Live Demo
+🚀 **[View Live Portfolio](https://css-styling-i39l.vercel.app)**
 
-- **GitHub Pages (automatic):** After merging your PR into `main`, the workflow `/.github/workflows/github-pages.yml` will run on push and publish `dist/` to the `gh-pages` branch.
+### Deployment Status
+![Vercel Deployment](deploy-badge.vercel.app)
 
-  - Workflow badge (status):
 
     [![Deploy to GitHub Pages](https://github.com/barakareuben28-collab/CSS-styling/actions/workflows/github-pages.yml/badge.svg)](https://github.com/barakareuben28-collab/CSS-styling/actions/workflows/github-pages.yml)
 
