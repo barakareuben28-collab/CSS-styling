@@ -1,7 +1,7 @@
 # NoirCraft — Portfolio
 
 ## Live Demo
-**Not deployed yet.** You can deploy to Netlify (instructions above) or use **GitHub Pages** — I added an Action that builds and publishes `dist/` to the `gh-pages` branch automatically when `main` receives changes.
+**https://noircraft-portfolio.css-styling-i39l.app).**
 
 - **GitHub Pages (automatic):** After merging your PR into `main`, the workflow `/.github/workflows/github-pages.yml` will run on push and publish `dist/` to the `gh-pages` branch.
 
