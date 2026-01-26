@@ -5,19 +5,30 @@ const Portfolio = () => {
     'project-1.jpg','project-2.jpg','project-3.jpg','project-4.jpg','project-5.jpg','project-6.jpg','project-7.jpg','project-9.jpg'
   ];
 
+  const projectTitles = [
+    { title: 'E-Commerce Platform', category: 'Web Design' },
+    { title: 'Mobile App Interface', category: 'App Design' },
+    { title: 'Brand Identity System', category: 'Branding' },
+    { title: 'Dashboard UI Design', category: 'Web Design' },
+    { title: 'Social Media Campaign', category: 'Digital Design' },
+    { title: 'Product Landing Page', category: 'Web Design' },
+    { title: 'User Experience Flow', category: 'UX Design' },
+    { title: 'Creative Portfolio Showcase', category: 'Digital Design' }
+  ];
+
   const modules = import.meta.glob('/src/assets/images/*.jpg', { eager: true });
   if (!modules || typeof modules !== 'object') {
     console.error('import.meta.glob did not return an object — bundler may not have transformed the glob.');
     throw new Error('import.meta.glob not transformed: check build config or replace with static imports');
   }
-  const items = images.map((img) => {
+  const items = images.map((img, index) => {
     const key = `/src/assets/images/${img}`;
     const mod = modules[key];
     if (!mod || !mod.default) {
       console.error('Missing module for', key, 'modules keys:', Object.keys(modules));
       throw new Error('Missing bundled image: ' + key);
     }
-    return { title: '', category: '', image: mod.default };
+    return { ...projectTitles[index], image: mod.default };
   });
 
   return (
