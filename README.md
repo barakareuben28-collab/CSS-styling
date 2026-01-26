@@ -8,10 +8,6 @@ The project is live and automatically deployed via Vercel.
 ---
 
 ## Project Overview
-**NoirCraft** is a polished design portfolio...
-
-
-## Project Overview
 **NoirCraft** is a polished design portfolio and studio site that showcases UI/UX work with a dark, bold aesthetic and energetic orange accents. The site is built with React and Tailwind CSS and follows a strict grid and spacing system derived from the provided reference design.
 
 ### Purpose
