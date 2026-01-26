@@ -92,6 +92,23 @@ If you reuse any assets, please follow the original Unsplash license and attribu
 
 ---
 
+## Development Timeline
+The project was developed across multiple phases spanning from December 2025 to January 2026:
+
+- **December 23-28**: Initial project setup, portfolio structure design, and NoirCraft brand identity implementation
+- **December 28 - January 7**: Core component development including Header, Navigation, Hero, Features, About, Portfolio, and Contact sections; Tailwind CSS styling and responsive layout implementation
+- **January 7-26**: Testing, debugging, refinement, and optimization phase; fixed image imports and dynamic glob patterns
+- **January 26 (Final Polish)**: 
+  - Fixed Vercel deployment base path configuration (changed from `/CSS-styling/` to `/`)
+  - Removed empty project-8.jpg file and updated Portfolio component
+  - Removed debug console.log statements for production build
+  - Added responsive design screenshots and Lighthouse report
+  - Final README documentation and repository cleanup
+
+All commits reflect genuine development progress with meaningful incremental changes addressing real issues encountered during implementation and deployment.
+
+---
+
 ## Installation & Setup
 1. Clone the repo:
    - `git clone https://github.com/<owner>/NoirCraft.git`
