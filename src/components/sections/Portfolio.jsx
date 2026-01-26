@@ -2,7 +2,7 @@ import ResponsiveImage from '../common/ResponsiveImage';
 
 const Portfolio = () => {
   const images = [
-    'project-1.jpg','project-2.jpg','project-3.jpg','project-4.jpg','project-5.jpg','project-6.jpg','project-7.jpg','project-8.jpg','project-9.jpg'
+    'project-1.jpg','project-2.jpg','project-3.jpg','project-4.jpg','project-5.jpg','project-6.jpg','project-7.jpg','project-9.jpg'
   ];
 
   const modules = import.meta.glob('/src/assets/images/*.jpg', { eager: true });
