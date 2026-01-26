@@ -17,7 +17,7 @@ const Portfolio = () => {
       console.error('Missing module for', key, 'modules keys:', Object.keys(modules));
       throw new Error('Missing bundled image: ' + key);
     }
-    return { title: 'Name Project', category: 'Categories', image: mod.default };
+    return { title: '', category: '', image: mod.default };
   });
 
   return (
