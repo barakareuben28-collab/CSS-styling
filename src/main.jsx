@@ -3,16 +3,12 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
 
-console.log('MAIN_MODULE_EXECUTED');
-
 try {
-  console.log('ABOUT_TO_RENDER');
   createRoot(document.getElementById('root')).render(
     <StrictMode>
       <App />
     </StrictMode>,
   )
-  console.log('RENDER_CALL_DONE');
 } catch (err) {
   const el = document.createElement('div');
   el.style.position = 'fixed';
@@ -47,13 +43,6 @@ setTimeout(() => {
       el.style.zIndex = '2147483647';
       el.textContent = 'No markup rendered into #root (root empty). Check browser console for errors and network failures (CSS/JS).';
       document.body.appendChild(el);
-      console.log('RENDER_DIAG', {
-        userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'n/a',
-        innerWidth: typeof window !== 'undefined' ? window.innerWidth : 'n/a',
-        innerHeight: typeof window !== 'undefined' ? window.innerHeight : 'n/a',
-        cssLinks: Array.from(document.querySelectorAll('link[rel="stylesheet"]')).map(l => l.href),
-        scripts: Array.from(document.querySelectorAll('script')).map(s => s.src || '[inline]')
-      });
     }
   } catch (e) {
     console.error('RENDER_DIAG_ERR', e);
